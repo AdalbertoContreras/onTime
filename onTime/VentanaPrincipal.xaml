@@ -1,0 +1,97 @@
+﻿<Window x:Class="onTime.VentanaPrincipal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="VentanaPrincipal" Height="450" Width="800">
+    <Grid>
+        <Menu VerticalAlignment="Top" Height="30">
+            <MenuItem Header="Archivo">
+                <MenuItem Header="Registrar servicio"/>
+                <MenuItem Header="Asignacion de servicio"/>
+                <MenuItem Header="Atender servicio"/>
+                <MenuItem Header="Ticket"/>
+                <Separator/>
+                <MenuItem Header="Modificar datos personales"/>
+                <MenuItem Header="Cambiar contraseña"/>
+                <Separator/>
+                <MenuItem Header="salir"/>
+            </MenuItem>
+            <MenuItem Header="Herramientas">
+                <MenuItem Header="usuario">
+                    <MenuItem Header="Registrar usuario"/>
+                    <MenuItem Header="Consultar usuarios"/>
+                    <MenuItem Header="Permisos"/>
+                </MenuItem>
+                <MenuItem Header="Mensajero">
+                    <MenuItem Header="Registrar mensajero"/>
+                    <MenuItem Header="Consultar mensajeros"/>
+                </MenuItem>
+                <MenuItem Header="Cliente">
+                    <MenuItem Header="Registrar cliente"/>
+                    <MenuItem Header="Consultar clientes"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Contabilidad">
+                <MenuItem Header="Planilla">
+                    <MenuItem Header="Registrar planilla"/>
+                    <MenuItem Header="Registrar pago"/>
+                    <MenuItem Header="Consultar planillas"/>
+                    <MenuItem Header="Consultar planillas no canceladas"/>
+                </MenuItem>
+                <MenuItem Header="Gasto">
+                    <MenuItem Header="Registrar gasto"/>
+                    <MenuItem Header="Consultar gastos"/>
+                    <MenuItem Header="Registrar tipo de gasto"/>
+                </MenuItem>
+                <Separator />
+                <MenuItem Header="Balance general" FontWeight="Bold"/>
+                <MenuItem Header="Total recaudado"/>
+                <MenuItem Header="Planillas no canceladas"/>
+                <MenuItem Header="Manejo de costos externos"/>
+                <MenuItem Header="Infome especial" FontWeight="Bold"/>
+            </MenuItem>
+            <MenuItem Header="Estadistica">
+                <MenuItem Header="# servicios realizados"/>
+                <MenuItem Header="Top clientes"/>
+                <MenuItem Header="Top mensajeros"/>
+                <MenuItem Header="Top barrio"/>
+                <MenuItem Header="Top tipo de servicio"/>
+                <MenuItem Header="Clientes pasivos" FontWeight="Bold"/>
+            </MenuItem>
+        </Menu>
+        <Grid Margin="0,0,0,196">
+            <Image Source="resources/logo.jpg" Margin="0,40,0,10"/>
+        </Grid>
+        <Grid>
+            <StackPanel Orientation="Horizontal" Margin="76,0,76,108" HorizontalAlignment="Center" Height="84" VerticalAlignment="Bottom">
+                <Button Width="60" Height="60" Margin="10 0 10 0" >
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+                <Button Width="60" Height="60" Margin="10 0 10 0">
+                    <Image Source="resources/registro.png"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

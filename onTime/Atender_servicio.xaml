@@ -1,0 +1,53 @@
+﻿<Window x:Class="onTime.Atender_servicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Atender_servicio" Height="670" Width="330">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Width="300" MaxWidth="300" Margin="10 0">
+            <TextBlock Text="SERVICIOS" FontSize="22" TextAlignment="Center" FontWeight="Bold"/>
+            <ComboBox HorizontalAlignment="Stretch" Margin="0 5" FontSize="16">
+                <TextBlock Text="Servicio 2" Width="435" FontSize="16"/>
+                <TextBlock Text="Servicio 3" Width="435" FontSize="16"/>
+                <TextBlock Text="Servicio 4" Width="435" FontSize="16"/>
+                <TextBlock Text="Servicio 1" Width="435" FontSize="16"/>
+            </ComboBox>
+            <TextBlock Text="CLIENTE" Style="{StaticResource textBlockTituloX}"/>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="DOCUMENTO" />
+                <TextBlock Text="1003378527" Style="{StaticResource textBlockNormal}" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="NOMBRE" TextAlignment="Left" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="Adalberto Enrique Contreras Ospino" Style="{StaticResource textBlockNormal}"/>
+            </StackPanel>
+            <Button Content="DETALLES DEL CLIENTE"  Style="{StaticResource ButtonDetalle}"/>
+            <TextBlock Text="SERVICIO" Style="{StaticResource textBlockTituloX}"/>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="TIPO DE SERVICIO" TextAlignment="Left" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="Servicio 1" Style="{StaticResource textBlockNormal}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="COSTO" TextAlignment="Left" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="$ 4.500" Style="{StaticResource textBlockNormal}"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="RECOGIDA" TextAlignment="Left" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="Mz u casa 403 Barrio Nuevo Milenio de las palmas de sanassa" FontSize="16" TextWrapping="WrapWithOverflow" MaxWidth="250" FontWeight="Normal"/>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="ENTREGA" TextAlignment="Left" FontWeight="Bold" FontSize="16"/>
+                <TextBlock Text="Mz u casa 404 Barrio Nuevo Milenio de las palmas de sanassa" MaxWidth="250"  TextWrapping="WrapWithOverflow" FontSize="16" Height="45"  FontWeight="Normal"/>
+            </StackPanel>
+            <Button Content="DETALLES DEL SERVICIO" Style="{StaticResource ButtonDetalle}"/>
+            <Border Style="{StaticResource BorderActualizacion}">
+                <Button Content="ATENDER SERVICIO" Style="{StaticResource WindowButtonStyle}"/>
+            </Border>
+        </StackPanel>
+    </Grid>
+</Window>

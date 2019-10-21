@@ -1,0 +1,56 @@
+﻿<Window x:Class="onTime.Consultar_mensajeros"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="Consultar mensajeros" Height="450" Width="1024">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0 10">
+                <TextBlock  Text="Numero de documento : " Width="200" Height="30" TextAlignment="Right"/>
+                <TextBox Height="30" Width="250" />
+                <TextBlock  Text="Nombres : " Width="200" Height="30" TextAlignment="Right"/>
+                <TextBox Height="30" Width="250" />
+            </StackPanel>
+            <ListView Name="usuariosLista" Height="178">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="# documento" Width="100" DisplayMemberBinding="{Binding numeroDocumento}" />
+                        <GridViewColumn Header="Nombres" Width="200" DisplayMemberBinding="{Binding nombres}" />
+                        <GridViewColumn Header="Apellidos" Width="200" DisplayMemberBinding="{Binding apellidos}" />
+                        <GridViewColumn Header="Direccion"  Width="200" DisplayMemberBinding="{Binding direccion}" />
+                        <GridViewColumn Header="Sexo"  Width="100" DisplayMemberBinding="{Binding sexo}" />
+                        <GridViewColumn Header="Fecha nacimiento"  Width="100" DisplayMemberBinding="{Binding fechaNacimiento}" />
+                        <GridViewColumn Header="Telefono"  Width="100" DisplayMemberBinding="{Binding telefono}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock  Text="Total de mensajeros"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10 0">
+                        <TextBlock  Text="Mensajeros masculinos"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10 0">
+                        <TextBlock  Text="Mensajeros femeninos"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Content="Exportar" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                    <Button Content="Imprimir" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                    <Button Content="Cerrar" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

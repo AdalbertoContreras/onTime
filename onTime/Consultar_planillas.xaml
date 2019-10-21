@@ -1,0 +1,67 @@
+﻿<Window x:Class="onTime.Consultar_planillas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="Consultar_planillas" Height="450" Width="1024">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0 10">
+                <TextBlock  Text="Fecha inicial : " Width="100" Height="30" TextAlignment="Right"/>
+                <DatePicker />
+                <TextBlock  Text="Fecha final : " Width="100" Height="30" TextAlignment="Right"/>
+                <DatePicker />
+                <TextBlock  Text="Mensajero : " Width="100" Height="30" TextAlignment="Right"/>
+                <ComboBox Width="150">
+                    <ComboBoxItem Content="Mensajero 1" Width="225"/>
+                    <ComboBoxItem Content="Mensajero 2" Width="225"/>
+                    <ComboBoxItem Content="Mensajero 3" Width="225"/>
+                    <ComboBoxItem Content="Mensajero 4" Width="225"/>
+                    <ComboBoxItem Content="Mensajero 5" Width="225"/>
+                    <ComboBoxItem Content="Mensajero 6" Width="225"/>
+                </ComboBox>
+            </StackPanel>
+            <ListView Name="usuariosLista" Height="178">
+                <ListView.View>
+                    <GridView >
+                        <GridViewColumn Header="Cod. planilla" Width="100" DisplayMemberBinding="{Binding numeroDocumento}" />
+                        <GridViewColumn Header="Valor" Width="150" DisplayMemberBinding="{Binding nombres}" />
+                        <GridViewColumn Header="Abonado" Width="150" DisplayMemberBinding="{Binding apellidos}" />
+                        <GridViewColumn Header="Estado" Width="150" DisplayMemberBinding="{Binding apellidos}" />
+                        <GridViewColumn Header="Mensajero" DisplayMemberBinding="{Binding apellidos}" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <StackPanel Orientation="Horizontal" Margin="0 10" HorizontalAlignment="Right">
+                <StackPanel Orientation="Horizontal" >
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock  Text="Valor total planillas"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10 0">
+                        <TextBlock  Text="Valor abonado"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10 0">
+                        <TextBlock  Text="Valor no cancelado"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="10 0">
+                        <TextBlock  Text="# planillas"/>
+                        <TextBlock  Text="130" FontWeight="Normal" TextAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                    <Button Content="Exportar" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                    <Button Content="Imprimir" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                    <Button Content="Cerrar" Margin="10 0" Width="120" HorizontalAlignment="Right"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

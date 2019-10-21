@@ -1,0 +1,70 @@
+﻿<Window x:Class="onTime.Registrar_servicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="Registrar_servicio" Width="400">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <StackPanel Orientation="Vertical" Margin="10 0">
+        <TextBlock Text="CLIENTE" />
+        <StackPanel Orientation="Horizontal">
+            <ComboBox Width="320" Height="30">
+                <TextBlock Text="Cliente 1" Width="330"/>
+                <TextBlock Text="Cliente 2" Width="330"/>
+                <TextBlock Text="Cliente 3" Width="330"/>
+                <TextBlock Text="Cliente 4" Width="330"/>
+                <TextBlock Text="Cliente 6" Width="330"/>
+                <TextBlock Text="Cliente 7" Width="330"/>
+                <TextBlock Text="Cliente 8" Width="330"/>
+            </ComboBox>
+            <Button Width="30" Height="30" Margin="10 0">
+                <Image Source="resources/registro.png"/>
+            </Button>
+        </StackPanel>
+        <TextBlock Text="TIPO DE SERVICIO" />
+        <ComboBox Height="30" HorizontalAlignment="Stretch">
+            <TextBlock Text="Tipo 1" Width="390"/>
+            <TextBlock Text="Tipo 2" Width="390"/>
+            <TextBlock Text="Tipo 3" Width="390"/>
+            <TextBlock Text="Tipo 4" Width="390"/>
+            <TextBlock Text="Tipo 5" Width="390"/>
+            <TextBlock Text="Tipo 6" Width="390"/>
+            <TextBlock Text="Tipo 7" Width="390"/>
+        </ComboBox>
+        <TextBlock Text="Valor $" />
+        <TextBox Text="" />
+        <TextBlock Text="BARRIO" />
+        <StackPanel Orientation="Horizontal">
+            <ComboBox Width="320" Height="30" HorizontalAlignment="Left">
+                <TextBlock Text="Barrio 1" Width="390"/>
+                <TextBlock Text="Barrio 2" Width="390"/>
+                <TextBlock Text="Barrio 3" Width="390"/>
+                <TextBlock Text="Barrio 4" Width="390"/>
+                <TextBlock Text="Barrio 5" Width="390"/>
+                <TextBlock Text="Barrio 6" Width="390"/>
+            </ComboBox>
+            <Button Width="30" Height="30" Margin="10 0">
+                <Image Source="resources/registro.png"/>
+            </Button>
+        </StackPanel>
+        <TextBlock Text="RECOGIDA" />
+        <TextBox Text="" />
+        <TextBlock Text="ENTREGA" />
+        <TextBox Text="" />
+        <TextBlock Text="Descripcion" />
+        <RichTextBox  Height="100">
+            <FlowDocument >
+                <Paragraph >
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument> 
+        </RichTextBox>
+        <Border Style="{StaticResource BorderActualizacion}">
+            <Button Content="ASIGNAR SERVICIO"  Style="{StaticResource WindowButtonStyle}" />
+        </Border>
+    </StackPanel>
+</Window>

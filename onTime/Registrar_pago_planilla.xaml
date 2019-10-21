@@ -1,0 +1,50 @@
+﻿<Window x:Class="onTime.Registrar_pago_planilla"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="Registrar pago planilla" 
+         Width="400" MinWidth="400">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <StackPanel Margin="10 0">
+        <StackPanel Orientation="Vertical" >
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="PLANILLAS" Style="{StaticResource textBlockTituloX}" />
+                <ComboBox HorizontalAlignment="Stretch" Height="30">
+                    <TextBlock Text="Panilla 1" Width="330"/>
+                    <TextBlock Text="Planilla 2" Width="330"/>
+                    <TextBlock Text="Planilla 3" Width="330"/>
+                    <TextBlock Text="Planilla 4" Width="330"/>
+                    <TextBlock Text="Planilla 6" Width="330"/>
+                    <TextBlock Text="Planilla 7" Width="330"/>
+                    <TextBlock Text="Planilla 8" Width="330"/>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="MENSAJEROS" Style="{StaticResource textBlockTituloX}" />
+                <ComboBox HorizontalAlignment="Stretch" Height="30">
+                    <TextBlock Text="Panilla 1" Width="330"/>
+                    <TextBlock Text="Planilla 2" Width="330"/>
+                    <TextBlock Text="Planilla 3" Width="330"/>
+                    <TextBlock Text="Planilla 4" Width="330"/>
+                    <TextBlock Text="Planilla 6" Width="330"/>
+                    <TextBlock Text="Planilla 7" Width="330"/>
+                    <TextBlock Text="Planilla 8" Width="330"/>
+                </ComboBox>
+                <TextBlock Text="1003378627" Style="{StaticResource textBlockNormal}" />
+                <TextBlock Text="Adalberto Enrique Contreras Ospino" Style="{StaticResource textBlockNormal}" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="VALOR A PAGAR"  />
+                <TextBox />
+            </StackPanel>
+        </StackPanel>
+        <Border Style="{StaticResource }">
+            <Button Content="REGISTRAR PAGO" Style="{StaticResource WindowButtonStyle}" />
+        </Border>
+    </StackPanel>
+</Window>

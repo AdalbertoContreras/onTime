@@ -1,0 +1,59 @@
+﻿<Window x:Class="onTime.Registrar_cliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:onTime"
+        mc:Ignorable="d"
+        Title="Registrar cliente"
+        Height="500" MinHeight="500" Width="400" MinWidth="400">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <StackPanel Margin="10 0">
+        <StackPanel Orientation="Vertical" >
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="DOCUMENTO" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="NOMBRES" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="APELLIDOS" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="FECHA DE NACIMIENTO" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="GENERO" FontSize="16" FontWeight="Bold"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <RadioButton GroupName="sexo" Content="Masculino" FontSize="16"  Grid.Column="0" Grid.ColumnSpan="1" Margin="0,0,0.143,0"/>
+                    <RadioButton GroupName="sexo" Content="Femenino" FontSize="16"  Grid.Column="1" Grid.ColumnSpan="2" Margin="4.857,0,0.286,0"/>
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="DIRECCION" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="NUMERO DE TELEFONO" />
+                <TextBox Text="" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="0 5">
+                <TextBlock Text="CORREO ELECTRONICO" />
+                <TextBox Text="" />
+            </StackPanel>
+        </StackPanel>
+        <Border Style="{StaticResource BorderRegistro}">
+            <Button Content="REGISTRAR CLIENTE" Style="{StaticResource WindowButtonStyle}" />
+        </Border>
+    </StackPanel>
+</Window>

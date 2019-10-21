@@ -1,0 +1,32 @@
+﻿<Window x:Class="onTime.Actualizar_contraseña"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Actualizar contraseña" Height="450" Width="400">
+    <Window.Resources>
+        <ResourceDictionary Source="resources/Dictionary.xaml" />
+    </Window.Resources>
+    <StackPanel Orientation="Vertical" Margin="10 0">
+        <StackPanel Orientation="Vertical" Margin="0 10">
+            <TextBlock Text="USUARIO"/>
+            <TextBlock Text="administrador" FontWeight="Bold" Foreground="DarkRed"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 10">
+            <TextBlock Text="CONTRASEÑA ANTERIOR"/>
+            <TextBox/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 10">
+            <TextBlock Text="CONTRASEÑA NUEVA"/>
+            <TextBox/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="0 10">
+            <TextBlock Text="REPETIR CONTRASEÑA NUEVA"/>
+            <TextBox/>
+        </StackPanel>
+        <Border Style="{StaticResource BorderActualizacion}">
+            <Button Content="CAMBIAR CONTRASEÑA" Style="{StaticResource WindowButtonStyle}" />
+        </Border>
+    </StackPanel>
+</Window>
